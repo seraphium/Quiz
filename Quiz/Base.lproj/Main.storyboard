@@ -20,45 +20,56 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfl-zq-4Th">
                                 <rect key="frame" x="288" y="43" width="25" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KF5-qP-RJT">
-                                <rect key="frame" x="254.5" y="190.5" width="93" height="30"/>
+                                <rect key="frame" x="254" y="190" width="93" height="30"/>
                                 <state key="normal" title="Show Answer"/>
                                 <connections>
                                     <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ebq-eE-SJ5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srf-v7-yQb">
-                                <rect key="frame" x="251.5" y="72" width="98" height="30"/>
+                                <rect key="frame" x="251" y="72" width="98" height="30"/>
                                 <state key="normal" title="Next Question"/>
                                 <connections>
                                     <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mlN-s4-40t"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA6-ek-4X9">
-                                <rect key="frame" x="288.5" y="162" width="25" height="20.5"/>
+                                <rect key="frame" x="288" y="162" width="25" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfJ-Hw-0Sb">
+                                <rect key="frame" x="279" y="43" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KF5-qP-RJT" firstAttribute="top" secondItem="ZA6-ek-4X9" secondAttribute="bottom" constant="8" id="3rA-Xm-ckp"/>
+                            <constraint firstItem="AfJ-Hw-0Sb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G4Y-td-hGF"/>
+                            <constraint firstItem="AfJ-Hw-0Sb" firstAttribute="top" secondItem="Wfl-zq-4Th" secondAttribute="top" id="GmI-Ro-eRh"/>
                             <constraint firstItem="KF5-qP-RJT" firstAttribute="centerX" secondItem="srf-v7-yQb" secondAttribute="centerX" id="QH4-Z8-ctJ"/>
                             <constraint firstItem="Wfl-zq-4Th" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="ROv-f7-xOF"/>
                             <constraint firstItem="ZA6-ek-4X9" firstAttribute="top" secondItem="srf-v7-yQb" secondAttribute="bottom" constant="60" id="Z5w-AR-xNp"/>
-                            <constraint firstItem="ZA6-ek-4X9" firstAttribute="centerX" secondItem="srf-v7-yQb" secondAttribute="centerX" id="fDL-nf-sF1"/>
+                            <constraint firstItem="ZA6-ek-4X9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dm1-G4-HKc"/>
+                            <constraint firstItem="srf-v7-yQb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hoz-dx-cAe"/>
                             <constraint firstItem="srf-v7-yQb" firstAttribute="top" secondItem="Wfl-zq-4Th" secondAttribute="bottom" constant="8.5" id="i1n-dZ-xYU"/>
                             <constraint firstItem="Wfl-zq-4Th" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wml-af-WBu"/>
-                            <constraint firstItem="Wfl-zq-4Th" firstAttribute="centerX" secondItem="srf-v7-yQb" secondAttribute="centerX" id="zVb-VJ-ozi"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="ZA6-ek-4X9" id="X9Z-oW-2Ex"/>
-                        <outlet property="questionLabel" destination="Wfl-zq-4Th" id="2KW-nh-kbE"/>
+                        <outlet property="currentQuestionLabel" destination="Wfl-zq-4Th" id="gzu-jp-YDr"/>
+                        <outlet property="currentQuestonLabelCenterXConstraint" destination="wml-af-WBu" id="Thc-I0-ho7"/>
+                        <outlet property="nextQuestionLabel" destination="AfJ-Hw-0Sb" id="Mji-6E-zH7"/>
+                        <outlet property="nextQuestonLabelCenterXConstraint" destination="G4Y-td-hGF" id="OwI-7v-KRh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
